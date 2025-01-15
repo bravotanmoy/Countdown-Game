@@ -13,7 +13,8 @@ export default function TimerChallenge({title, targetTime}) {
     function handleStart() {
         timer.current = setTimeout(() => {
             setTimerExpired(true);
-            dialog.current.showModal(); // showModal is not react
+            // dialog.current.showModal(); // showModal is not react
+            dialog.current.open(); // showModal is not react
         }, targetTime * 1000);
 
         setTimerStarted(true);
